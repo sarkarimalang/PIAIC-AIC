@@ -19,6 +19,24 @@ total = physics + statistics + math + chemistry
 subdefaultmarks = 100 #default marks
 failingsub = 0
 
+subjects = [physics, statistics, math, chemistry]
+for x in subjects:
+    if x >= 81: # here it should read all the subjects and get separated result of all subjects
+        subgrader = "A+"
+    elif x >= 71 and x <=80:
+        subgrader = "A"
+    elif x >= 61 and x <=70:
+        subgrader = "B"
+    elif x >= 51 and x <=60:
+        subgrader = "C"
+    elif x >= 41 and x <=50:
+        subgrader = "D"
+    elif x >= 31 and x:
+        subgrader = "E"
+    else:
+        subgrader = "F"
+    print (subgrader)
+
 if physics >= 81:
     phsubgrade = "A+"
 elif physics >= 71 and physics <=80:
@@ -148,6 +166,7 @@ passfatfail = total/totalsub
 if percentage>=63:
     number1result = 'Passed'
     print ("You have (",number1result, ") this semester. You will be promoted to next semester")
+    print ("-----------------------------------------------------------------------------")
 else:
     number1result = 'Failed'
     print ("You are -",number1result, "- in (",failingsub,") subjects (",phpname,chename,mathname,stsname,") in this semester.")
