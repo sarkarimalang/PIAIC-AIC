@@ -3,7 +3,7 @@ print ("------------------------------------------------------------------------
 print ("\t\t************ ~@ MarkSheet @~ ************")
 print ("-----------------------------------------------------------------------------")
 #totalsub is to count the number of entries
-passingmarks = 32 #passing marks variable
+passingmarks = 33 #passing marks variable
 totalsub = 0 #this is to get the total number of subjects
 physics = int(input("Numbers of Physics? "))
 totalsub += 1
@@ -18,6 +18,7 @@ total = physics + statistics + math + chemistry
 #subject-grade #subject-grade #subject-grade #subject-grade #subject-grade
 subdefaultmarks = 100 #default marks
 failingsub = 0
+
 if physics >= 81:
     phsubgrade = "A+"
 elif physics >= 71 and physics <=80:
@@ -33,7 +34,7 @@ elif physics >= 31 and physics:
 else:
     failingsub += 1
     phsubgrade = "F"
-    
+
 if chemistry >= 81:
     chsubgrade = "A+"
 elif chemistry >= 71 and chemistry <=80:
@@ -66,7 +67,7 @@ else:
     failingsub += 1
     masubgrade = "F"
 
-if physics >= 81 or chemistry >= 81 or math >= 81 or statistics >= 81:
+if statistics >= 81:
     stsubgrade = "A+"
 elif statistics >= 71 and statistics <= 80:
     stsubgrade = "A"
