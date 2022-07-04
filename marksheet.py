@@ -1,144 +1,183 @@
 #marksheet
-print ("-----------------------------------------------------------------------------")
-print ("\t\t************ ~@ MarkSheet @~ ************")
-print ("-----------------------------------------------------------------------------")
 #totalsub is to count the number of entries
 passingmarks = 33 #passing marks variable
+subdefaultmarks = 100 #default marks
+failingsub = 0
 totalsub = 0 #this is to get the total number of subjects
-physics = int(input("Numbers of Physics? "))
+rollnumber = int(input("Enter Your Roll Number? "))
+yourname = input("Enter Your Name? ")
+#Physics
+try:
+    physics = int(input("Numbers of Physics? "))
+except ValueError:
+    print('PLease input a value for Physics')
+    physics = int(input("Numbers of Physics? "))
 totalsub += 1
-chemistry = int(input("Numbers of Chemistry? "))
+#Chemistry
+try:
+    chemistry = int(input("Numbers of Chemistry? "))
+except ValueError:
+    print('PLease input a value for Chemistry')
+    chemistry = int(input("Numbers of Chemistry? "))
 totalsub += 1
-math = int(input("Numbers of Math? "))
+#Math
+try:
+    math = int(input("Numbers of Math? "))
+except ValueError:
+    print('PLease input a value for Math')
+    math = int(input("Numbers of Math? "))
 totalsub += 1
-statistics = int(input("Numbers of Statistics? "))
+#Statistics
+try:
+    statistics = int(input("Numbers of Statistics? "))
+except ValueError:
+    print('PLease input a value for Statistics')
+    statistics = int(input("Numbers of Statistics? "))
 totalsub += 1
+
 total = physics + statistics + math + chemistry
 #subject-grade #subject-grade #subject-grade #subject-grade #subject-grade
 #subject-grade #subject-grade #subject-grade #subject-grade #subject-grade
-subdefaultmarks = 100 #default marks
-failingsub = 0
 
 subjects = [physics, statistics, math, chemistry]
 for x in subjects:
     if x >= 81: # here it should read all the subjects and get separated result of all subjects
-        subgrader = "A+"
+        if x == physics:
+            subgraderp = "A+"
+            physicsmsg = "Pass"
+            phpname = ""
+        if x == chemistry:
+            subgraderc = "A+"
+            chemistrysmsg = "Pass"
+            chename = ""
+        if x == math:
+            subgraderm = "A+"
+            mathsmsg = "Pass"
+            mathname = ""
+        if x == statistics:
+            subgraderst = "A+"
+            statisticsmsg = "Pass"
+            stsname = ""
     elif x >= 71 and x <=80:
-        subgrader = "A"
+        if x == physics:
+            subgraderp = "A"
+            physicsmsg = "Pass"
+            phpname = ""
+        if x == chemistry:
+            subgraderc = "A"
+            chemistrysmsg = "Pass"
+            chename = ""
+        if x == math:
+            subgraderm = "A"
+            mathsmsg = "Pass"
+            mathname = ""
+        if x == statistics:
+            subgraderst = "A"
+            statisticsmsg = "Pass"
+            stsname = ""
     elif x >= 61 and x <=70:
-        subgrader = "B"
+        if x == physics:
+            subgraderp = "B"
+            physicsmsg = "Pass"
+            phpname = ""
+        if x == chemistry:
+            subgraderc = "B"
+            chemistrysmsg = "Pass"
+            chename = ""
+        if x == math:
+            subgraderm = "B"
+            mathsmsg = "Pass"
+            mathname = ""
+        if x == statistics:
+            subgraderst = "B"
+            statisticsmsg = "Pass"
+            stsname = ""
     elif x >= 51 and x <=60:
-        subgrader = "C"
+        if x == physics:
+            subgraderp = "C"
+            physicsmsg = "Pass"
+            phpname = ""
+        if x == chemistry:
+            subgraderc = "C"
+            chemistrysmsg = "Pass"
+            chename = ""
+        if x == math:
+            subgraderm = "C"
+            mathsmsg = "Pass"
+            mathname = ""
+        if x == statistics:
+            subgraderst = "C"
+            statisticsmsg = "Pass"
+            stsname = ""
     elif x >= 41 and x <=50:
-        subgrader = "D"
+        if x == physics:
+            subgraderp = "D"
+            physicsmsg = "Pass"
+            phpname = ""
+        if x == chemistry:
+            subgraderc = "D"
+            chemistrysmsg = "Pass"
+            chename = ""
+        if x == math:
+            subgraderm = "D"
+            mathsmsg = "Pass"
+            mathname = ""
+        if x == statistics:
+            subgraderst = "D"
+            statisticsmsg = "Pass"
+            stsname = ""
     elif x >= 31 and x:
-        subgrader = "E"
+        if x == physics:
+            subgraderp = "E"
+            physicsmsg = "Pass"
+            phpname = ""
+        if x == chemistry:
+            subgraderc = "E"
+            chemistrysmsg = "Pass"
+            chename = ""
+        if x == math:
+            subgraderm = "E"
+            mathsmsg = "Pass"
+            mathname = ""
+        if x == statistics:
+            subgraderst = "E"
+            statisticsmsg = "Pass"
+            stsname = ""
     else:
-        subgrader = "F"
-    #print (subgrader)
-
-if physics >= 81:
-    phsubgrade = "A+"
-elif physics >= 71 and physics <=80:
-    phsubgrade = "A"
-elif physics >= 61 and physics <=70:
-    phsubgrade = "B"
-elif physics >= 51 and physics <=60:
-    phsubgrade = "C"
-elif physics >= 41 and physics <=50:
-    phsubgrade = "D"
-elif physics >= 31 and physics:
-    phsubgrade = "E"
-else:
-    failingsub += 1
-    phsubgrade = "F"
-
-if chemistry >= 81:
-    chsubgrade = "A+"
-elif chemistry >= 71 and chemistry <=80:
-    chsubgrade = "A"
-elif chemistry >= 61 and chemistry <=70:
-    chsubgrade = "B"
-elif chemistry >= 51 and chemistry <=60:
-    chsubgrade = "C"
-elif chemistry >= 41 and chemistry <=50:
-    chsubgrade = "D"
-elif chemistry >= 31 and chemistry <=40:
-    chsubgrade = "E"
-else:
-    failingsub += 1
-    chsubgrade = "F"
-
-if math >= 81:
-    masubgrade = "A+"
-elif math >= 71 and math <= 80:
-    masubgrade = "A"
-elif math >= 61 and math <= 70:
-    masubgrade = "B"
-elif math >= 51 and math <= 60:
-    masubgrade = "C"
-elif math >= 41 and math <= 50:
-    masubgrade = "D"
-elif math >= 31 and math <= 40:
-    masubgrade = "E"
-else:
-    failingsub += 1
-    masubgrade = "F"
-
-if statistics >= 81:
-    stsubgrade = "A+"
-elif statistics >= 71 and statistics <= 80:
-    stsubgrade = "A"
-elif statistics >= 61 and statistics <= 70:
-    stsubgrade = "B"
-elif statistics >= 51 and statistics <= 60:
-    stsubgrade = "C"
-elif statistics >= 41 and statistics <= 50:
-    stsubgrade = "D"
-elif statistics >= 31 and statistics <= 40:
-    stsubgrade = "E"
-else:
-    failingsub += 1
-    stsubgrade = "F"
+        if x == physics:
+            subgraderp = "F"
+            physicsmsg = "Fail" #pass fail
+            phpname = "Physics, " #pass fail
+        if x == chemistry:
+            subgraderc = "F"
+            chemistrysmsg = "Fail"
+            chename = "Chemistry, "
+        if x == math:
+            subgraderm = "F"
+            mathsmsg = "Fail"
+            mathname = "Math, "
+        if x == statistics:
+            subgraderst = "F"
+            statisticsmsg = "Fail"
+            stsname = "Statistics, "
+        failingsub += 1
 #subject-grade #subject-grade #subject-grade #subject-grade #subject-grade
 #subject-grade #subject-grade #subject-grade #subject-grade #subject-grade
 
-#pass fail #pass fail #pass fail #pass fail #pass fail #pass fail 
-if physics>passingmarks:
-    physicsmsg = "Pass"
-    phpname = ""
-else:
-    physicsmsg = "Fail"
-    phpname = "Physics, "
-#pass fail #pass fail #pass fail #pass fail #pass fail #pass fail 
-if chemistry>passingmarks:
-    chemistrysmsg = "Pass"
-    chename = ""
-else:
-    chemistrysmsg = "Fail"
-    chename = "Chemistry, "
-#pass fail #pass fail #pass fail #pass fail #pass fail #pass fail 
-if math>passingmarks:
-    mathsmsg = "Pass"
-    mathname = ""
-else:
-    mathsmsg = "Fail"
-    mathname = "Math, "
-#pass fail #pass fail #pass fail #pass fail #pass fail #pass fail 
-if statistics>passingmarks:
-    statisticsmsg = "Pass"
-    stsname = ""
-else:
-    statisticsmsg = "Fail"
-    stsname = "Statistics, "
-#pass fail #pass fail #pass fail #pass fail #pass fail #pass fail 
+print ("-----------------------------------------------------------------------------")
+print ("\t\t************ ~@ MarkSheet @~ ************")
+print ("-----------------------------------------------------------------------------")
+print ("|\t~Roll Number~ (",rollnumber,")")
+print ("-----------------------------------------------------------------------------")
+print ("|\t~Name~ (",yourname,")")
 print ("-----------------------------------------------------------------------------")
 # \t is used for spacing
-print("|\tSubject: \t", "Marks", "\t\t", "Result \t", "Grade")
-print("|\tPhysics: \t", physics, "/ 100", "\t", physicsmsg, "\t\t", subgrader)
-print("|\tChemistry: \t", chemistry, "/ 100", "\t",chemistrysmsg, "\t\t", subgrader)
-print("|\tMath: \t\t", math, "/ 100", "\t", mathsmsg, "\t\t", subgrader)
-print("|\tStatistics: \t", statistics, "/ 100", "\t", statisticsmsg, "\t\t", subgrader)
+print("|\tSubject: \t|", "Marks", "\t|", "Result \t|", "Grade")
+print ("-----------------------------------------------------------------------------")
+print("|\tPhysics: \t|", physics, "/ 100", "\t|", physicsmsg, "\t\t|", subgraderp)
+print("|\tChemistry: \t|", chemistry, "/ 100", "\t|",chemistrysmsg, "\t\t|", subgraderc)
+print("|\tMath: \t\t|", math, "/ 100", "\t|", mathsmsg, "\t\t|", subgraderm)
+print("|\tStatistics: \t|", statistics, "/ 100", "\t|", statisticsmsg, "\t\t|", subgraderst)
 print ("-----------------------------------------------------------------------------")
 print ("Total Obtained Marks Are : ", total, "Out Of", totalsub*100)
 print ("-----------------------------------------------------------------------------")
@@ -164,12 +203,12 @@ print ("You Secured (",grade,") grade and got (", total/totalsub, "% ) percentag
 print ("-----------------------------------------------------------------------------")
 #the below is to get pass or fail
 passfatfail = total/totalsub
-if percentage>=63:
+if percentage>=63 and physics >= 33 and chemistry>=33 and math>=33 and statistics>=33:
     number1result = 'Passed'
     print ("You have (",number1result, ") this semester. You will be promoted to next semester")
     print ("-----------------------------------------------------------------------------")
 else:
-    number1result = 'Failed'
+    number1result = 'Fail'
     print ("You are -",number1result, "- in (",failingsub,") subjects (",phpname,chename,mathname,stsname,") in this semester.")
     print ("-----------------------------------------------------------------------------")
     print ("You will not be promoted to next semester")
