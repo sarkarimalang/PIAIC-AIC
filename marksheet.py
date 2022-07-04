@@ -35,7 +35,7 @@ for x in subjects:
         subgrader = "E"
     else:
         subgrader = "F"
-    print (subgrader)
+    #print (subgrader)
 
 if physics >= 81:
     phsubgrade = "A+"
@@ -120,6 +120,7 @@ else:
 #pass fail #pass fail #pass fail #pass fail #pass fail #pass fail 
 if math>passingmarks:
     mathsmsg = "Pass"
+    mathname = ""
 else:
     mathsmsg = "Fail"
     mathname = "Math, "
@@ -134,10 +135,10 @@ else:
 print ("-----------------------------------------------------------------------------")
 # \t is used for spacing
 print("|\tSubject: \t", "Marks", "\t\t", "Result \t", "Grade")
-print("|\tPhysics: \t", physics, "/ 100", "\t", physicsmsg, "\t\t", phsubgrade)
-print("|\tChemistry: \t", chemistry, "/ 100", "\t",chemistrysmsg, "\t\t", chsubgrade)
-print("|\tMath: \t\t", math, "/ 100", "\t", mathsmsg, "\t\t", masubgrade)
-print("|\tStatistics: \t", statistics, "/ 100", "\t", statisticsmsg, "\t\t", stsubgrade)
+print("|\tPhysics: \t", physics, "/ 100", "\t", physicsmsg, "\t\t", subgrader)
+print("|\tChemistry: \t", chemistry, "/ 100", "\t",chemistrysmsg, "\t\t", subgrader)
+print("|\tMath: \t\t", math, "/ 100", "\t", mathsmsg, "\t\t", subgrader)
+print("|\tStatistics: \t", statistics, "/ 100", "\t", statisticsmsg, "\t\t", subgrader)
 print ("-----------------------------------------------------------------------------")
 print ("Total Obtained Marks Are : ", total, "Out Of", totalsub*100)
 print ("-----------------------------------------------------------------------------")
